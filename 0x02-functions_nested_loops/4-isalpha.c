@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _isalpha - checks for alphabet character
  * @c: the parameter that contains letters in lowercase and uppercase
