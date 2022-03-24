@@ -26,5 +26,6 @@ char *_strcat(char *dest, char *src)
 		a++;
 		b++;
 	}
+
 	return (dest);
 }
