@@ -13,8 +13,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	if (h == NULL)
 	{
-		printf("%s", "Empty lisit");
-		return (len);
+		return (0);
 	}
 	while (h->prev != NULL)
 	{
