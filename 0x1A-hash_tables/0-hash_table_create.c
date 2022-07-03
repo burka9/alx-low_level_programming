@@ -6,20 +6,16 @@
  * @size: size of the array
  * Return: pointer to the array
  */
-hash_table_t hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-	if (size <= 0)
-		return (NULL);
-
+	hash_table_t *table = (hash_table_t *)malloc(sizeof(hash_table_t));
 	hash_node_t *array = (hash_node_t *)malloc(sizeof(hash_node_t) * size);
 
-	if (array == NULL)
-		return (NULL);
+	if (size < 1 || table == NULL || array == NULL)
+		return NULL;
 
-	hash_table_t table = {
-		size: size,
-		array: &array
-	};
+	table->size = size;
+	table->array = &array;
 
 	return (table);
 }
